@@ -32,5 +32,7 @@ namespace University_System_ERD___Models.Models
         [Required]
         [MaxLength(20)]
         public string status { get; set; } = "In Progress"; // default value
+
+
     }
 }

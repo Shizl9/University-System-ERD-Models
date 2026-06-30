@@ -41,5 +41,6 @@ namespace University_System_ERD___Models.Models
         [Range(0.0,4.0)]
         public decimal gpa { get; set; } //default 
 
+        public ICollection<Enrollment> enrollments { get; set; } //navigation
     }
 }

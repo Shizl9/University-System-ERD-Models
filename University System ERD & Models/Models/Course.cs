@@ -35,12 +35,23 @@ namespace University_System_ERD___Models.Models
         [Required]
         public int ?departmentId { get; set; } //(not null)
 
-
+        //fk
+        [Required]
         public int? instructorId { get; set; } // foreign key (not null)
 
 
         [Required]
         [MaxLength(20)]
         public string semesterOffered { get; set; } //user input
+        
+        //fk+navigation
+        [ForeignKey("departmentId")]
+        public Department department { get; set; }//navigation
+
+        //fk+navigation:
+        [ForeignKey("instructorId")]
+        public Instructor Instructor { get; set; } //navigation
+        public ICollection<Enrollment> enrollments { get; set; } //navigation
+
     }
 }
