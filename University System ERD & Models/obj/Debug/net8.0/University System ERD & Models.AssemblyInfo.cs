@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("University System ERD & Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2677907351513b01f233c5fea67e45a8729e17d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0835fa10ba035effc8f108f7bff3c08b662aa76")]
 [assembly: System.Reflection.AssemblyProductAttribute("University System ERD & Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("University System ERD & Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

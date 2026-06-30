@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|c:\\users\\sheik\\onedrive\\documents\\bakend\\university system erd \u0026 models\\university system erd \u0026 models\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|solutionrelative:university system erd \u0026 models\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|c:\\users\\sheik\\onedrive\\documents\\bakend\\university system erd \u0026 models\\university system erd \u0026 models\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|solutionrelative:university system erd \u0026 models\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +23,6 @@
       "RelativeMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|solutionrelative:university system erd \u0026 models\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|c:\\users\\sheik\\onedrive\\documents\\bakend\\university system erd \u0026 models\\university system erd \u0026 models\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|solutionrelative:university system erd \u0026 models\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|c:\\users\\sheik\\onedrive\\documents\\bakend\\university system erd \u0026 models\\university system erd \u0026 models\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4734AABF-5BAD-D65F-0780-9E29CCA0CCA8}|University System ERD \u0026 Models\\University System ERD \u0026 Models.csproj|solutionrelative:university system erd \u0026 models\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -34,24 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Enrollment.cs",
-              "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Enrollment.cs",
-              "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Enrollment.cs",
-              "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Enrollment.cs",
-              "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Enrollment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T10:14:48.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Course.cs",
               "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Course.cs",
@@ -59,12 +46,11 @@
               "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Course.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T10:14:38.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T10:14:38.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Department.cs",
               "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Department.cs",
@@ -72,34 +58,45 @@
               "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Department.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T10:14:29.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T10:14:29.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Instructor.cs",
               "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Instructor.cs",
               "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Instructor.cs",
               "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Instructor.cs",
               "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Instructor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T10:14:18.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Student.cs",
               "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Student.cs",
               "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Student.cs",
               "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Student.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wCkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T10:14:07.65Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Enrollment.cs",
+              "RelativeDocumentMoniker": "University System ERD \u0026 Models\\Models\\Enrollment.cs",
+              "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD \u0026 Models\\University System ERD \u0026 Models\\Models\\Enrollment.cs",
+              "RelativeToolTip": "University System ERD \u0026 Models\\Models\\Enrollment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T10:14:48.514Z"
             },
             {
               "$type": "Document",
@@ -111,8 +108,7 @@
               "RelativeToolTip": "University System ERD \u0026 Models\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T07:51:15.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T07:51:15.379Z"
             }
           ]
         }
