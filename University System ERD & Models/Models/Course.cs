@@ -30,27 +30,31 @@ namespace University_System_ERD___Models.Models
         [Range(1,6)]
         public int creditHours { get; set; } //user input
 
+        [Required]
+        [MaxLength(20)]
+        public string semesterOffered { get; set; } //user input
+
+        //(1 dept - M courcess):
 
         // FK
         [Required]
         public int ?departmentId { get; set; } //(not null)
 
+       //fk+navigation
+        [ForeignKey("department")]
+        public Department department { get; set; }//navigation
+
+        //(1 instructor - M courcess):
+
         //fk
         [Required]
         public int? instructorId { get; set; } // foreign key (not null)
-
-
-        [Required]
-        [MaxLength(20)]
-        public string semesterOffered { get; set; } //user input
-        
-        //fk+navigation
-        [ForeignKey("departmentId")]
-        public Department department { get; set; }//navigation
-
+       
         //fk+navigation:
-        [ForeignKey("instructorId")]
+        [ForeignKey("Instructor")]
         public Instructor Instructor { get; set; } //navigation
+
+
         public ICollection<Enrollment> enrollments { get; set; } //navigation
 
     }

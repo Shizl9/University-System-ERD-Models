@@ -40,8 +40,9 @@ namespace University_System_ERD___Models.Models
         [MaxLength(50)]
         public string academicTitle { get; set; } //user input
 
+        //(1 dept - 1 instructor):
         public Department departmentHead { get; set; }//navigation 
-
+        //(1 instructor - m courcess)
         public ICollection<Course> courses { get; set; }////navigation
 
     }

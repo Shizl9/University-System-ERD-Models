@@ -28,15 +28,19 @@ namespace University_System_ERD___Models.Models
         [Range(0, double.MaxValue)]
         public decimal budget { get; set; }  //user input
 
-       
-        //came from instructor class==> foreign key
-        [ForeignKey("headInstructorId")]
 
-       // FK
+
+        //(1 dept - 1 instructor):
+
+        // FK
         public int? headInstructorId { get; set; } //foreign key proberty
 
+        //came from instructor class==> foreign key
+        [ForeignKey("headInstructor")]
+
         public Instructor headInstructor { get; set; } //navigation proberty
-        
+
+        //(1 dept - M courcess):
         public ICollection<Course>courses { get; set; }//navigation
     }
 }
