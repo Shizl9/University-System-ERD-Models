@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E_Commerce_System_ERD___Models.Models
+{
+    public class Category
+    {
+        [Key]
+        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int categoryId { get; set; }//system generated
+
+        [Required]
+        [MaxLength(100)]
+        public string categoryName { get; set; }// user input
+
+
+    }
+}

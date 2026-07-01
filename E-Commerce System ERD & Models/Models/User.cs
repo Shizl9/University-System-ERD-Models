@@ -40,8 +40,9 @@ namespace E_Commerce_System_ERD___Models.Models
         public string ?address { get; set; } //User input
 
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime registrationDate { get; set; }//default 
-        []
+
         public bool isActive { get; set; } = true; //default
 
     }
