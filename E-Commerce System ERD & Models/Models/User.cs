@@ -31,19 +31,25 @@ namespace E_Commerce_System_ERD___Models.Models
 
         [Required]
         [MaxLength(100)]
-        public string fullName { get; set; }
+        public string fullName { get; set; }//user input
 
         [MaxLength(20)]
-        public string? phoneNumber { get; set; }
+        public string? phoneNumber { get; set; }//user input
 
         [MaxLength(300)]
         public string ?address { get; set; } //User input
 
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime registrationDate { get; set; }//default 
+        public DateTime registrationDate { get; set; }//default //system generate it
 
         public bool isActive { get; set; } = true; //default
 
+
+
+        //=====================================================
+        public ICollection<Order> orders { get; set; }//navigation proberty
+
+        public ICollection<Review>reviews { get; set; }//navigation proberty
     }
 }

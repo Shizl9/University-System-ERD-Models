@@ -18,7 +18,13 @@ namespace E_Commerce_System_ERD___Models.Models
         [Required]
         [MaxLength(100)]
         public string categoryName { get; set; }// user input
+        [MaxLength(500)]
+        public string ?description { get; set; }//user input 
 
+        [MaxLength(300)]
+        public string? imageUrl { get; set; } //user input
+
+        public ICollection<Product> products { get; set; }//navigation proberty
 
     }
 }
