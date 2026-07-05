@@ -38,20 +38,22 @@ namespace University_System_ERD___Models.Models
 
         // FK
         [Required]
+        //fk+navigation
+        [ForeignKey("department")]
         public int ?departmentId { get; set; } //(not null)
 
-       //fk+navigation
-        [ForeignKey("department")]
+       
         public Department department { get; set; }//navigation
 
         //(1 instructor - M courcess):
 
         //fk
         [Required]
+        [ForeignKey("Instructor")]
+
         public int? instructorId { get; set; } // foreign key (not null)
        
         //fk+navigation:
-        [ForeignKey("Instructor")]
         public Instructor Instructor { get; set; } //navigation
 
 

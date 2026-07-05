@@ -15,12 +15,6 @@ namespace University_System_ERD___Models.Models
         public int? enrollmentId { get; set; } // system generated
 
 
-        [Required]
-        public int studentId { get; set; } // foreign key
-
-        [Required]
-        public int courseId { get; set; } // foreign key
-
 
         [Required]
         public DateTime enrollmentDate { get; set; } // user input
@@ -34,5 +28,22 @@ namespace University_System_ERD___Models.Models
         public string status { get; set; } = "In Progress"; // default value
 
 
+        //=============================================================================
+        //foreign key proberty
+        [Required]
+        [ForeignKey("studnt")]
+        public int studentId { get; set; } // foreign key
+        
+        public Student studnt { get; set; } //navigation proberty
+
+
+        //foreign key proberty
+        [Required]
+        [ForeignKey("course")]
+        public int courseId { get; set; } // foreign key
+
+       
+
+        public Course course { get; set; } //navigation proberty
     }
 }

@@ -32,11 +32,12 @@ namespace University_System_ERD___Models.Models
 
         //(1 dept - 1 instructor):
 
+        //came from instructor class==> foreign key
+        [ForeignKey("headInstructor")]
         // FK
         public int? headInstructorId { get; set; } //foreign key proberty
 
-        //came from instructor class==> foreign key
-        [ForeignKey("headInstructor")]
+      
 
         public Instructor headInstructor { get; set; } //navigation proberty
 
