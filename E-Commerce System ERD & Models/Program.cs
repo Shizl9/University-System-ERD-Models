@@ -1,4 +1,5 @@
 ﻿using E_Commerce_System_ERD___Models.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
 namespace E_Commerce_System_ERD___Models
@@ -52,6 +53,24 @@ namespace E_Commerce_System_ERD___Models
 
             //.userId is now populated with the DB-assigned Id
             Console.WriteLine("New user ID: " + newUser.userId);
+        }
+
+        //add a New Product to a Category 
+        public static void AddProduct()
+        {
+            Console.WriteLine("\n=== Add a New Product to a Category ===");
+
+            Console.WriteLine("view all Caticories");
+           foreach( Category c in context.Categories)
+            {
+                Console.WriteLine($"id:{c.categoryId}, Name:{c.categoryName},Description:{c.description}");
+            }
+
+            Console.WriteLine("Enter catigory Id:");
+            int catigoryId = int.Parse(Console.ReadLine());
+
+           
+                                                             
         }
         static void Main(string[] args)
         {
