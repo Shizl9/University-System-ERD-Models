@@ -350,7 +350,26 @@ namespace E_Commerce_System_ERD___Models
             }
         }
 
+        //8 View All Products (Get All)
+        public static void ViewAllProducts()
+        {
+            //get all products
+            List<Product> products = context.Products.ToList();
+            if (products.Count==0)
+            {
+                Console.WriteLine("No products found.");
+                return;
+            }
 
+            Console.WriteLine("Name\t\tPrice\tStock\tAvailable");
+            Console.WriteLine("--------------------------------------------");
+
+            foreach (Product p in products)
+            {
+                Console.WriteLine($" {p.productName}\t\t{p.price}\t\t{p.stockQuantity}\t\t{p.isAvailable}");
+            }
+            Console.WriteLine("--------------------------------------------");
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
