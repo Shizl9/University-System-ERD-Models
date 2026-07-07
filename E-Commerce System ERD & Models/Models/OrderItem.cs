@@ -31,8 +31,6 @@ namespace E_Commerce_System_ERD___Models.Models
         [ForeignKey("Product")]
         public int productId { get; set; }                // from list — chosen from available products
         public Product Product { get; set; }              // navigation property
-
-
-
+        public decimal unitPrice { get;  set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD & Models\\University System ERD & Models\\University System ERD & Models.csproj": {}
+    "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\University System ERD & Models\\University System ERD & Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD & Models\\University System ERD & Models\\University System ERD & Models.csproj": {
+    "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\University System ERD & Models\\University System ERD & Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD & Models\\University System ERD & Models\\University System ERD & Models.csproj",
+        "projectUniqueName": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\University System ERD & Models\\University System ERD & Models.csproj",
         "projectName": "University System ERD & Models",
-        "projectPath": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD & Models\\University System ERD & Models\\University System ERD & Models.csproj",
+        "projectPath": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\University System ERD & Models\\University System ERD & Models.csproj",
         "packagesPath": "C:\\Users\\sheik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\University System ERD & Models\\University System ERD & Models\\obj\\",
+        "outputPath": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\University System ERD & Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -99,6 +99,93 @@ namespace E_Commerce_System_ERD___Models
             Console.WriteLine($"new product Id:{newProduct.productId}");
 
         }
+
+
+        //03 Place Order
+        public static void PlaceOrder()
+        {
+            //make sure that usere is there:
+            Console.WriteLine("Enter user Id:");
+            int userId = int.Parse(Console.ReadLine());
+
+            bool validuserTD = context.Users.Any(d => d.userId == userId);
+
+            //if user not found print this:
+            if (validuserTD == false)
+            {
+                Console.WriteLine("No users founded.");
+                return;
+            }
+
+            //enter order details:
+            Order newOrder = new Order
+            {
+                userId=userId,
+                orderDate = DateTime.Now,
+                status = "pending",
+                totalAmount = 0
+            };
+
+            //add order:
+            context.Orders.Add(newOrder);
+            context.SaveChanges();
+            Console.WriteLine($"new order Id:{newOrder.orderId}");
+
+            //find selected prduct:
+            Console.WriteLine("Enter product Id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            Product selectedProduct = context.Products.FirstOrDefault(p => p.productId == productId);
+
+            if (selectedProduct == null)
+            {
+                Console.WriteLine("Not found product.");
+                return;
+            }
+
+            Console.WriteLine("Enter quantity:");
+            int quantity = int.Parse(Console.ReadLine());
+
+            //check stock:
+            if (selectedProduct.stockQuantity < quantity)
+            {
+                Console.WriteLine("Not enough stock.");
+                return;
+            }
+            
+            //calculate total amount:
+            decimal totalAmount = selectedProduct.price * quantity;
+
+            //create orderItem:
+            
+            OrderItem newOrderItem = new OrderItem
+            {
+                orderId = newOrder.orderId,
+                productId=productId,
+                quantity=quantity,
+                unitPrice = selectedProduct.price
+            };
+
+            context.OrderItems.Add(newOrderItem);
+            
+
+            newOrder.totalAmount += totalAmount;
+            selectedProduct.stockQuantity-=quantity;
+
+            context.SaveChanges();
+
+
+
+
+
+
+
+
+
+
+
+
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
