@@ -254,6 +254,37 @@ namespace E_Commerce_System_ERD___Models
 
         }
 
+        //05Update Product Price and Availability
+        public static void UpdateProductPriceandAvailability()
+            {
+            //ask to enter producct id :
+            Console.WriteLine("Enter prduct Id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            //find product Id:
+           Product products = context.Products.FirstOrDefault(p=>p.productId==productId);
+
+            if (products != null)
+            {
+                // ask about th new price & availability:
+                Console.WriteLine("Enter a new price:");
+                decimal UpdatedPrice = decimal.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter an availability of this product:");
+                bool AvailableProduct = bool.Parse(Console.ReadLine());
+
+                products.price = UpdatedPrice;
+                products.isAvailable = AvailableProduct;
+                context.SaveChanges();
+
+                Console.WriteLine("product updated successfuly.");
+            }
+
+           
+
+
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
