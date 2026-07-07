@@ -332,6 +332,25 @@ namespace E_Commerce_System_ERD___Models
             }
         }
 
+        //07Delete a Review
+
+        public static void DeleteReview()
+        {
+            //ask user to enter review id that he wanted to delete:
+            Console.WriteLine("Enter review Id:");
+            int reviewId = int.Parse(Console.ReadLine());
+
+            //find this id
+            Review review = context.Reviews.FirstOrDefault(r => r.reviewId == reviewId);
+            if (review != null)
+            {
+                context.Reviews.Remove(review);//deleted
+                context.SaveChanges();
+                Console.WriteLine("Review deleted.");
+            }
+        }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
