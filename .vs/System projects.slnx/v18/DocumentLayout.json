@@ -99,8 +99,7 @@
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T08:22:44.815Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -110,7 +109,7 @@
               "RelativeDocumentMoniker": "E-Commerce System ERD \u0026 Models\\Program.cs",
               "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\E-Commerce System ERD \u0026 Models\\Program.cs",
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAALsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wGgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T11:29:51.704Z",
               "EditorCaption": ""
