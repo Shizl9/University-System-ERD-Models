@@ -1,6 +1,7 @@
 ﻿using E_Commerce_System_ERD___Models.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
+using System.Threading.Channels;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace E_Commerce_System_ERD___Models
@@ -280,9 +281,55 @@ namespace E_Commerce_System_ERD___Models
                 Console.WriteLine("product updated successfuly.");
             }
 
-           
 
 
+
+        }
+
+        //06Cancel an Order
+        public static void CancelanOrder()
+        {
+            //ask user to enter order id that he wanted to cancel:
+            Console.WriteLine("Enter Order Id:");
+            int orderId = int.Parse(Console.ReadLine());
+
+            //find this order :
+            Order orders = context.Orders.FirstOrDefault(o => o.orderId == orderId);
+
+            if (orders == null)
+            {
+                Console.WriteLine("Order not found.");
+                return;
+            }
+
+            //check order's status
+            if (orders.status != "pending")
+            {
+                Console.WriteLine("You cannot cancel this order.");
+                return;
+            }
+
+            //git all order items of this order:
+            OrderItem orderItem = context.OrderItems.FirstOrDefault(o => o.orderId == orderId);
+
+            if (orderItem != null)
+            {
+                //take product id:
+                Console.WriteLine("Enter product Id:");
+                int productId = int.Parse(Console.ReadLine());
+
+                //find product id:
+                Product product = context.Products.FirstOrDefault(p => p.productId == productId);
+
+                orderItem.productId = productId;
+                product.stockQuantity += orderItem.quantity;
+
+                //after retrn the stock set status as cancelled:
+                orders.status = "cancelled.";
+                context.SaveChanges();
+
+                Console.WriteLine("order cancelled successfuly.");
+            }
         }
 
         static void Main(string[] args)
