@@ -60,17 +60,44 @@ namespace E_Commerce_System_ERD___Models
         {
             Console.WriteLine("\n=== Add a New Product to a Category ===");
 
-            Console.WriteLine("view all Caticories");
-           foreach( Category c in context.Categories)
+            //view all Caticories
+
+            List<Category> allCatigories = context.Categories.ToList();
+
+            foreach (Category c in context.Categories)
             {
                 Console.WriteLine($"id:{c.categoryId}, Name:{c.categoryName},Description:{c.description}");
             }
 
+            //user choose catigory
             Console.WriteLine("Enter catigory Id:");
             int catigoryId = int.Parse(Console.ReadLine());
 
-           
-                                                             
+            //enter product details:
+            Console.WriteLine("Enter product name:");
+            string productName = Console.ReadLine();
+
+            Console.WriteLine("Enter price:");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter stock Quantity:");
+            int stockQuantity = int.Parse(Console.ReadLine());
+
+            //add new product:
+            Product newProduct = new Product
+            {
+                productName=productName,
+                price=price,
+                stockQuantity=stockQuantity,
+                createdAt=DateTime.Now,
+                isAvailable=true
+            };
+
+            context.Products.Add(newProduct);
+            context.SaveChanges();
+
+            Console.WriteLine($"new product Id:{newProduct.productId}");
+
         }
         static void Main(string[] args)
         {
