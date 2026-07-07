@@ -1,6 +1,7 @@
 ﻿using E_Commerce_System_ERD___Models.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace E_Commerce_System_ERD___Models
 {
@@ -186,6 +187,73 @@ namespace E_Commerce_System_ERD___Models
 
 
         }
+
+        //04Write a Product Review Easy 
+        public static void WriteProductReview()
+        {
+            //view all users to choose user id:
+            List<User> users = context.Users.ToList();
+
+            foreach (User u in context.Users)
+            {
+                Console.WriteLine($"id:{u.userId}");
+            }
+
+            //choose user id:
+            Console.WriteLine("Enter user Id:");
+            int userId = int.Parse(Console.ReadLine());
+
+            if (users ==null)
+            {
+                Console.WriteLine("No users found.");
+                return;
+            }
+
+            //view all product to choose product id:
+            List<Product> products = context.Products.ToList();
+
+            //choose product id:
+            Console.WriteLine("Enter product Id:");
+            int prodductId = int.Parse(Console.ReadLine());
+
+            if (products == null)
+            {
+                Console.WriteLine("No products found.");
+                return;
+            }
+
+            //ask user to enter ratings from 1-5:
+            Console.WriteLine("Enter rating :");
+            int rating = int.Parse(Console.ReadLine());
+
+            if (rating < 1 || rating > 5)
+            {
+                Console.WriteLine("incorrect rating.");
+                return;
+            }
+
+            //ask user to write commernt
+            Console.WriteLine("Enter comment:");
+            string comment = Console.ReadLine();
+
+            Review newReview = new Review
+            {
+                userId=userId,
+                productId=prodductId,
+                rating=rating,
+                comment=comment,
+                reviewDate=DateTime.Now
+            };
+
+            //add review 
+            context.Reviews.Add(newReview);
+            context.SaveChanges();
+
+            Console.WriteLine($"review Id:{newReview.reviewId}");
+
+
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
