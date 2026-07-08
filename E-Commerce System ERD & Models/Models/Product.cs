@@ -49,8 +49,8 @@ namespace E_Commerce_System_ERD___Models.Models
 
         [ForeignKey("Category")]
         public int? categoryId { get; set; }//fk (to category)
-        public Category Category { get; set; }//navigation property
+        public virtual Category Category { get; set; }//navigation property
 
-        public ICollection<Review> reviews { get; set; }//navigation property
+        public virtual ICollection<Review> reviews { get; set; }//navigation property
     }
 }

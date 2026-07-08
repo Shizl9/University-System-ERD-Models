@@ -425,6 +425,7 @@ namespace E_Commerce_System_ERD___Models
             }
         }
 
+        // View Order History with Full Details
         public static void ViewOrderHistorywithFullDetails()
         {
             // Ask the user for their userId
@@ -454,6 +455,47 @@ namespace E_Commerce_System_ERD___Models
                 }
             }
 
+        }
+
+        // Product Summary Report 
+        public static void ProductSummaryReport()
+        {
+            //projection
+            var productsList = context.Products.Select(p => new
+            {
+                p.productName,
+                categoryName = p.Category.categoryName,
+                reviewCount = p.reviews.Count(),
+                avgRating  = p.reviews.Average(r=>(double)r.rating),
+                currentStock= p.stockQuantity
+            }).ToList();
+
+            foreach (var item in productsList)
+            {
+                Console.WriteLine($"{item.productName} , {item.categoryName}, {item.reviewCount}, {item.avgRating},{item.currentStock}");
+            }
+
+            //lazy loading
+            
+            Console.WriteLine("Enter product id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            Product product = context.Products.FirstOrDefault(p => p.productId == productId);
+
+            if (product == null)
+            {
+                Console.WriteLine("Product not found.");
+                return;
+            }
+
+            // Second query fires here to load the Category
+            string CatName = product.Category.categoryName;
+
+            // Another query fires here to load Reviews
+            int reviewCount = product.reviews.Count();
+
+            Console.WriteLine($"Category: {CatName}");
+            Console.WriteLine($"Review Count: {reviewCount}");
         }
         static void Main(string[] args)
         {

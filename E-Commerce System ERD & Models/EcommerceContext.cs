@@ -20,6 +20,7 @@ namespace E_Commerce_System_ERD___Models
         //connection sting => database address عنوان الداتا
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
+            options.UseLazyLoadingProxies();
             options.UseSqlServer("Server=localhost;Database=ECommercDB;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 

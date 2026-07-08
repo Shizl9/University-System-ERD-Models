@@ -24,7 +24,7 @@ namespace E_Commerce_System_ERD___Models.Models
         [MaxLength(300)]
         public string? imageUrl { get; set; } //user input
 
-        public ICollection<Product> products { get; set; }//navigation proberty
+        public virtual ICollection<Product> products { get; set; }//navigation proberty
 
     }
 }
