@@ -370,6 +370,34 @@ namespace E_Commerce_System_ERD___Models
             }
             Console.WriteLine("--------------------------------------------");
         }
+
+        //09 Filter Products by Category and Price Range
+        public static void FilterProductaByCatigoryandPrice()
+        {
+            //ask user to enter catigory id
+            Console.WriteLine("Enter catygory id:");
+            int catigoryId = int.Parse(Console.ReadLine());
+
+            //enter minimum price
+            Console.WriteLine("Enter minimum price:");
+            decimal minPrice= decimal.Parse(Console.ReadLine());
+
+            //enter maximum price
+            Console.WriteLine("Enter maximum price:");
+            decimal maxPrice = decimal.Parse(Console.ReadLine());
+
+            //filter products :
+            var products = context.Products.Where(p => p.categoryId == catigoryId & p.price >= minPrice & p.price <= maxPrice)
+                                           .OrderBy(p => p.price) 
+                                           .ToList();
+
+            //view all results
+            foreach(var p in products)
+            {
+                Console.WriteLine($" Name: {p.productName}, Price:{p.price}");
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
