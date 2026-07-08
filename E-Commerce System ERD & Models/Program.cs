@@ -499,7 +499,59 @@ namespace E_Commerce_System_ERD___Models
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            bool exit = false;
+
+            while (exit == false)
+            {
+                Console.WriteLine("\n========================================");
+                Console.WriteLine("  E-commerce System");
+                Console.WriteLine("========================================");
+                Console.WriteLine(" 1  -Register User");
+                Console.WriteLine(" 2  -Add Product");
+                Console.WriteLine(" 3  -Place Order ");
+                Console.WriteLine(" 4  -Write Product Review ");
+                Console.WriteLine(" 5  -Update Product Price and Availability ");
+                Console.WriteLine(" 6  -Cancelan Order ");
+                Console.WriteLine(" 7  -Delete Review ");
+                Console.WriteLine(" 8  -View All Products ");
+                Console.WriteLine(" 9  -Filter Producta By Catigory and Price ");
+                Console.WriteLine(" 10 -Get Category with All Its Products ");
+                Console.WriteLine(" 11 -View Order History with Full Details ");
+                Console.WriteLine(" 12 -Product Summary Report ");
+                Console.WriteLine(" 0  - Exit");
+                Console.WriteLine("========================================");
+                Console.Write("Select option: ");
+
+                int option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1: RegisterUser(); break;
+                    case 2: AddProduct(); break;
+                    case 3: PlaceOrder(); break;
+                    case 4: WriteProductReview(); break;
+                    case 5: UpdateProductPriceandAvailability(); break;
+                    case 6: CancelanOrder(); break;
+                    case 7: DeleteReview(); break;
+                    case 8: ViewAllProducts(); break;
+                    case 9: FilterProductaByCatigoryandPrice(); break;
+                    case 10: GetCategorywithAllItsProducts(); break;
+                    case 11: ViewOrderHistorywithFullDetails(); break;
+                    case 12: ProductSummaryReport(); break;
+                    case 0: exit = true; break;
+                    default: Console.WriteLine("Invalid option. Please try again."); break;
+                }
+
+                if (!exit)
+                {
+                    Console.WriteLine("\nPress any key to continue...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+
+            Console.WriteLine("Goodbye!");
         }
     }
+    
 }

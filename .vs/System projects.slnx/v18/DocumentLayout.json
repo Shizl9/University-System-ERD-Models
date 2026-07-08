@@ -55,8 +55,7 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T09:32:20.301Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -69,8 +68,7 @@
               "ViewState": "AgIAACEAAAAAAAAAAAA4wDUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T09:42:48.134Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\EcommerceContext.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T08:44:25.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T08:44:25.996Z"
             },
             {
               "$type": "Document",
@@ -95,8 +92,7 @@
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Models\\Category.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwBoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T08:43:46.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T08:43:46.539Z"
             },
             {
               "$type": "Document",
@@ -106,7 +102,7 @@
               "RelativeDocumentMoniker": "E-Commerce System ERD \u0026 Models\\Program.cs",
               "ToolTip": "C:\\Users\\sheik\\OneDrive\\Documents\\BAKEND\\system projects\\E-Commerce System ERD \u0026 Models\\Program.cs",
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Program.cs",
-              "ViewState": "AgIAAFIBAAAAAAAAAAAiwPkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACACAAAAAAAAAAAUwCsCAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T11:29:51.704Z",
               "EditorCaption": ""
@@ -121,8 +117,7 @@
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Models\\OrderItem.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T11:08:29.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T11:08:29.005Z"
             },
             {
               "$type": "Document",
@@ -134,8 +129,7 @@
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Models\\Order.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowC0AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T07:07:44.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T07:07:44.505Z"
             },
             {
               "$type": "Document",
@@ -147,8 +141,7 @@
               "RelativeToolTip": "E-Commerce System ERD \u0026 Models\\Models\\User.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAmwAcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T07:10:13.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T07:10:13.067Z"
             }
           ]
         }
