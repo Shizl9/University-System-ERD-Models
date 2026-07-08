@@ -11,6 +11,8 @@ namespace E_Commerce_System_ERD___Models
     {
        
         public static EcommerceContext context = new EcommerceContext();
+
+
         //Register a New User 
         public static void RegisterUser()
         {
@@ -189,7 +191,7 @@ namespace E_Commerce_System_ERD___Models
 
         }
 
-        //04Write a Product Review Easy 
+        //04 Write a Product Review Easy 
         public static void WriteProductReview()
         {
             //view all users to choose user id:
@@ -255,7 +257,7 @@ namespace E_Commerce_System_ERD___Models
 
         }
 
-        //05Update Product Price and Availability
+        //05 Update Product Price and Availability
         public static void UpdateProductPriceandAvailability()
             {
             //ask to enter producct id :
@@ -286,7 +288,7 @@ namespace E_Commerce_System_ERD___Models
 
         }
 
-        //06Cancel an Order
+        //06 Cancel an Order
         public static void CancelanOrder()
         {
             //ask user to enter order id that he wanted to cancel:
@@ -332,7 +334,7 @@ namespace E_Commerce_System_ERD___Models
             }
         }
 
-        //07Delete a Review
+        //07 Delete a Review
 
         public static void DeleteReview()
         {
@@ -397,6 +399,31 @@ namespace E_Commerce_System_ERD___Models
                 Console.WriteLine($" Name: {p.productName}, Price:{p.price}");
             }
         }
+
+
+        //10 Get Category with All Its Products (Include)
+        public static void GetCategorywithAllItsProducts()
+        {
+            Console.WriteLine("Enter catygory id:");
+            int catigoryId = int.Parse(Console.ReadLine());
+
+            Category category = context.Categories.Include(c => c.products)
+                                                  .FirstOrDefault(c => c.categoryId == catigoryId);
+
+            if (category == null)
+            {
+                Console.WriteLine("Category not found.");
+                return;
+            }
+
+            Console.WriteLine($"Name:{category.categoryName}, description:{category.description}");
+
+            foreach(var c in category.products)
+            {
+                Console.WriteLine($"{c.productId}");
+            }
+        }
+
 
         static void Main(string[] args)
         {
