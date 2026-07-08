@@ -1,5 +1,6 @@
 ﻿using E_Commerce_System_ERD___Models.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Reflection.Metadata;
 using System.Threading.Channels;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -424,7 +425,36 @@ namespace E_Commerce_System_ERD___Models
             }
         }
 
+        public static void ViewOrderHistorywithFullDetails()
+        {
+            // Ask the user for their userId
+            Console.WriteLine("Enter user id:");
+            int userId = int.Parse(Console.ReadLine());
 
+
+            //load all orders for this user
+            User? user = context.Users.Include(u => u.orders)
+                                     .ThenInclude(o => o.OrderItems)
+                                     .ThenInclude(i => i.Product)
+                                     .FirstOrDefault(u => u.userId == userId);
+            
+            if (user == null)
+            {
+                Console.WriteLine("No users founded.");
+                return;
+            }
+
+            foreach (var order in user.orders)
+            {
+                Console.WriteLine($"order date: { order.orderDate}, status:{order.status}, total Amount:{order.totalAmount}");
+                
+                foreach(var item in order.OrderItems)
+                {
+                    Console.WriteLine($"product name:{item.Product.productName}, price:{item.unitPrice}, quantity: {item.quantity}");
+                }
+            }
+
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");

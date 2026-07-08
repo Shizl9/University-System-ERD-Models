@@ -43,5 +43,6 @@ namespace E_Commerce_System_ERD___Models.Models
         public User User { get; set; }//navigation property
 
         public ICollection<Product>products { get; set; }//navigation property
+        public virtual ICollection<OrderItem> OrderItems { get; set; }//navigation property
     }
 }
